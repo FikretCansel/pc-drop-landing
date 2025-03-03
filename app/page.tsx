@@ -1,9 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import FeaturesGrid from './components/FeaturesGrid';
 import AppPreview from './components/AppPreview';
-import { APP_CONFIG } from './constants/config';
 
 export default function Home() {
   return (
@@ -37,42 +35,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Requirements Section */}
-      <div className="w-full py-12 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-3xl font-bold mb-4">System Requirements</h2>
-            <div className="max-w-2xl mx-auto">
-              <div className="text-left mb-6">
-                <h3 className="text-xl font-semibold mb-3">System:</h3>
-                <ul className="text-gray-600 space-y-2 mb-6">
-                  <li>✓ Windows Operating System</li>
-                  <li>✓ Python 3.8 or higher</li>
-                </ul>
-                <h3 className="text-xl font-semibold mb-3">Key Dependencies:</h3>
-                <ul className="text-gray-600 space-y-2 grid md:grid-cols-2 gap-2">
-                  <li>• FastAPI 0.115+</li>
-                  <li>• Uvicorn 0.34+</li>
-                  <li>• Jinja2 3.1+</li>
-                  <li>• WebSockets 15.0+</li>
-                  <li>• QR Code 8.0+</li>
-                  <li>• Pillow 11.1+</li>
-                </ul>
-              </div>
-              <div className="bg-gray-100 p-4 rounded-lg text-left">
-                <p className="text-sm text-gray-600 mb-2">For developers building from source:</p>
-                <code className="bg-gray-800 text-white p-2 rounded block mb-2">pip install -r requirements.txt</code>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
       {/* Features Grid */}
       <FeaturesGrid />
 
@@ -101,7 +63,7 @@ export default function Home() {
                 <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center flex-shrink-0">2</div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Set Up Your Folders</h3>
-                  <p className="text-gray-600">Select your download folder in the "INBOX" section and choose which folder to share in the "SHARING BOX" section.</p>
+                  <p className="text-gray-600">Select your download folder in the &quot;INBOX&quot; section and choose which folder to share in the &quot;SHARING BOX&quot; section.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -117,6 +79,28 @@ export default function Home() {
                   <h3 className="text-xl font-semibold mb-2">Start Transferring</h3>
                   <p className="text-gray-600">Begin sending and receiving files through the web interface. Use the chat feature for quick communication between devices.</p>
                 </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Requirements Section */}
+      <div className="w-full py-12 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-8"
+          >
+            <h2 className="text-3xl font-bold mb-4">System Requirements</h2>
+            <div className="max-w-2xl mx-auto">
+              <div className="text-left mb-6">
+                <h3 className="text-xl font-semibold mb-3">System:</h3>
+                <ul className="text-gray-600 space-y-2 mb-6">
+                  <li>✓ Windows Operating System</li>
+                </ul>
               </div>
             </div>
           </motion.div>

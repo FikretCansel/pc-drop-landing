@@ -5,6 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleClick = () => {
+    setIsOpen(false);
+    // Allow time for the menu to close before scrolling
+    setTimeout(() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+  };
+
   return (
     <div className="md:hidden">
       <button
@@ -53,7 +61,7 @@ export default function MobileMenu() {
               </a>
               <a
                 href="#contact"
-                onClick={() => setIsOpen(false)}
+                onClick={handleClick}
                 className="text-gray-600 hover:text-blue-600 transition-colors"
               >
                 Contact
